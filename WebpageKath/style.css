@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px;
+    background-color: #f4f4f4; 
+}
+
+/* Ліва колонка */
+.profile-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.profile-photo-container {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+.profile-title h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+.location-text {
+    font-size: 1em;
+    color: #8e44ad; 
+    font-weight: bold;
+}
+
+/* Права колонка */
+.profile-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стилі для About Me */
+.about-me ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.label {
+    color: #0056b3; 
+    font-weight: bold;
+    display: inline-block;
+    width: 120px; 
+}
+
+.value {
+    color: #000;
+}
+
+/* Стилі для Interests */
+.interests ul li {
+    margin-bottom: 10px;
+    color: #333;
+    list-style-type: none; 
+}
