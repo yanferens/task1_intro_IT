@@ -1,49 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yan | Backend & Systems Developer</title>
+    <title>Dev Portfolio | Головна</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Yan</h1>
-        <p>Software Developer | C++ • Go • Linux</p>
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">Dev<span>Stack</span></span>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="#team">Команда</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Сучасні рішення для Backend & Systems</h1>
+            <p>Ми — команда розробників, що спеціалізуються на високонавантажених системах, алгоритмах та сучасному вебі.</p>
+            <div class="hero-btns">
+                <a href="#team" class="btn-primary">Наша команда</a>
+                <a href="https://github.com" class="btn-secondary">Наш GitHub</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm a developer passionate about systems programming, computer networks, and mathematics. I enjoy solving complex algorithmic problems, participating in competitive programming, and building reliable backend systems.</p>
-        </section>
+    <main id="team" class="container">
+        <h2 class="section-title">Команда проєкту</h2>
+        <div class="member-card">
+                <div class="card-header">
+                    <h3>Vanya</h3>
+                    <span class="badge">Algorithms</span>
+                </div>
+                <p class="role">C++ Developer</p>
+                <p>Спеціалізується на прикладній математиці, структурах даних STL та розробці складних алгоритмічних обчислювачів.</p>
+                <div class="skills-tags">
+                    <span>C++</span> <span>STL</span> <span>Linux</span> <span>Matrices</span>
+                </div>
+            </div>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C++, Go, Python</li>
-                <li><strong>Databases & Tools:</strong> PostgreSQL, Redis, Kafka</li>
-                <li><strong>Operating Systems:</strong> Linux (Ubuntu), FreeBSD</li>
-            </ul>
-        </section>
+        <div class="member-card">
+                <div class="card-header">
+                    <h3>Kateryna</h3>
+                    <span class="badge">Frontend</span>
+                </div>
+                <p class="role">UI/UX & Frontend Developer</p>
+                <p>Створення сучасних інтерфейсів. Фокус на вивченні нових IT технологій та самовдосконаленні в розробці.</p>
+                <div class="skills-tags">
+                    <span>HTML5</span> <span>CSS3</span> <span>UI/UX</span> <span>IT Tech</span>
+                </div>
+            </div>
 
-        <section id="projects">
-            <h2>Projects</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="card-header">
+                    <h3>Yan</h3>
+                    <span class="badge">Systems</span>
+                </div>
+                <p class="role">Backend & Systems Developer</p>
+                <p>Розробка на Go та C++. Досвід з FreeBSD, мережевими протоколами та хмарною інфраструктурою.</p>
+                <div class="skills-tags">
+                    <span>Go</span> <span>C++</span> <span>FreeBSD</span> <span>Redis</span>
+                </div>
+            </div>
+
             
-            <div class="project-card">
-                <h3>GoTickets</h3>
-                <p>A backend system developed in <strong>Go</strong> using a microservices approach. It includes <strong>PostgreSQL</strong> for data storage, <strong>Redis</strong> for caching, and <strong>Kafka</strong> for message processing.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Energy Monitor Bot</h3>
-                <p>A Telegram bot written in <strong>Go</strong> designed to monitor and send convenient notifications about power outage schedules.</p>
-            </div>
-        </section>
+            
+        </div>
     </main>
 
     <footer>
-        <p>Connect with me: <a href="https://github.com/">GitHub</a> | <a href="mailto:your.email@example.com">Email</a></p>
+        <p>&copy; 2026 DevStack Team. Створено з використанням GitHub Copilot.</p>
     </footer>
+
+    <script>
+    function toggleTheme() {
+        const body = document.body;
+        // Перевіряємо поточну тему
+        const currentTheme = body.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        
+        body.setAttribute('data-theme', newTheme);
+       
+        localStorage.setItem('theme', newTheme);
+    }
+
+    
+    (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.setAttribute('data-theme', savedTheme);
+        } else {
+            // Якщо нічого не збережено, ставимо dark за замовчуванням
+            document.body.setAttribute('data-theme', 'dark');
+        }
+    })();
+</script>
 </body>
 </html>
